@@ -1,0 +1,29 @@
+body {
+    text-align: center;
+    font-size: 2em;
+    font-family: Input Mono;
+}
+
+table {
+    padding: 1em;
+}
+
+td {
+    padding: 0.5em;
+    border: 1px solid #ddd;
+}
+
+td:hover {
+    background-color: pink;
+}
+
+.header-row {
+    font-weight: bold;
+    border: 2px solid black;
+}
+
+.header-row:hover {
+    transtion-duration: 0.5s;
+    background-color: darken(pink, 10%);
+}
+
