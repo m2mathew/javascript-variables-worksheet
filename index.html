@@ -13,63 +13,75 @@
         <td>Snippet</td>
         <td>Expression</td>
         <td>Answer</td>
+        <td>Explanation</td>
       </tr>
       <tr>
         <td>1</td>
         <td>100+4</td>
-        <td></td>
+        <td>104</td>
+        <td>basic addition</td>
       </tr>
       <tr>
         <td>2</td>
         <td>'a'+'b'</td>
-        <td></td>
+        <td>'ab'</td>
+        <td>Concatenation of strings</td>
       </tr>
       <tr>
         <td>3</td>
         <td>'Bob'+'Smith'</td>
-        <td></td>
+        <td>'BobSmith'</td>
+        <td>Concatenation of strings</td>
       </tr>
       <tr>
         <td>4</td>
         <td>'7'+'9'</td>
-        <td></td>
+        <td>'79'</td>
+        <td>Concatenation of strings</td>
       </tr>
       <tr>
         <td>5</td>
         <td>'7'+9</td>
-        <td></td>
+        <td>'79'</td>
+        <td>Concatenation of strings, as JS treats the number like a string here</td>
       </tr>
       <tr>
         <td>6</td>
         <td>'7'-9</td>
-        <td></td>
+        <td>-2</td>
+        <td>Because the minus symbol is special to arithmetic functions, this treated as a numerical value</td>
       </tr>
       <tr>
         <td>7</td>
         <td>'abc'*3</td>
-        <td></td>
+        <td>NaN</td>
+        <td>The multiplication operator wants to treat all parts of the expression as a number which is not possible - Not a Number </td>
       </tr>
       <tr>
         <td>8</td>
         <td>7+2*3</td>
-        <td></td>
+        <td>13</td>
+        <td>Order of operations</td>
       </tr>
       <tr>
         <td>9</td>
         <td>(7+2)*3</td>
-        <td></td>
+        <td>27</td>
+        <td>Order of operations</td>
       </tr>
       <tr>
         <td>10</td>
         <td>(null+2)/3</td>
-        <td></td>
+        <td>0.6666666666666666</td>
+        <td>Order of operations<br>"null" has no value, so evaluation continues after that expression</td>
       </tr>
       <tr>
         <td>11</td>
         <td>var name;
             <br>
             name</td>
-        <td></td>
+        <td>undefined</td>
+        <td>The variable "name" holds no value</td>
       </tr>
       <tr>
         <td>12</td>
@@ -81,16 +93,19 @@
             <br>
             z-3
             </td>
-        <td></td>
+        <td>25</td>
+        <td>Logical math through use of variables</td>
       </tr>
+      <tr>
         <td>13</td>
         <td>var a = true;
             <br>
             var b = false;
             <br>
             a && b</td>
-        <td></td>
-      <tr>
+        <td>false</td>
+        <td>Both condition must be met to be True</td>
+      </tr>
       <tr>
         <td>14</td>
         <td>var a = true;
@@ -98,7 +113,8 @@
             var b = false;
             <br>
             a || b</td>
-        <td></td>
+        <td>true</td>
+        <td>If either condition is True, then the statement evaluates to True</td>
       </tr>
       <tr>
         <td>15</td>
@@ -109,7 +125,8 @@
             foo++;
             <br>
             foo/2</td>
-        <td></td>
+        <td>2.5</td>
+        <td>Variable "foo" is incremented two times and then divided</td>
       </tr>
       <tr>
         <td>16</td>
@@ -120,12 +137,14 @@
             var nextAge = Math.ceil(age);
             <br>
             nextAge - wholeAge</td>
-        <td></td>
+        <td>1</td>
+        <td>Variable age is rounded up then down to evaluate</td>
       </tr>
       <tr>
         <td>17</td>
         <td>'5' + 3 - 3</td>
-        <td></td>
+        <td>50</td>
+        <td>First part of expression is concatenated, then subtraction treats the expression as a number</td>
       </tr>
       <tr>
         <td>18</td>
@@ -134,7 +153,8 @@
             isRed = !isRed;
             <br>
             isRed</td>
-        <td></td>
+        <td>true</td>
+        <td>The use of the "!" (bang) character switches the value to the opposite</td>
       </tr>
       <tr>
         <td>19</td>
@@ -143,7 +163,8 @@
             var isBlue = !!isBlue;
             <br>
             isBlue</td>
-        <td></td>
+        <td>true</td>
+        <td>Double bang is not a possible equality expression</td>
       </tr>
       <tr>
         <td>20</td>
@@ -152,7 +173,8 @@
             var age = 25;
             <br>
             name.length + age</td>
-        <td></td>
+        <td>30</td>
+        <td>Length of string added to a number</td>
       </tr>
       <tr>
         <td>21</td>
@@ -163,7 +185,8 @@
             var point = '[' + x + ', ' + y + ']';
             <br>
             'point: '+point</td>
-        <td></td>
+        <td>'point: [10, 73.3]'</td>
+        <td>Variables inserted into a string variable (that mimics an array)</td>
       </tr>
       <tr>
         <td>22</td>
@@ -172,7 +195,8 @@
             var numberOfGoats = 3;
             <br>
             numberOfGoats + numberOfSheep++</td>
-        <td></td>
+        <td>19</td>
+        <td>The arithmetic of the values inside the variables occurs before the "++" increment expression can be evaluated</td>
       </tr>
       <tr>
         <td>23</td>
@@ -181,7 +205,8 @@
             var numberOfGoats = 3;
             <br>
             numberOfGoats - ++numberOfSheep</td>
-        <td></td>
+        <td>-14</td>
+        <td>The increment expression is before variable so it is evaluated before the numberOfSheep variable is already used</td>
       </tr>
       <tr>
         <td>24</td>
@@ -190,148 +215,11 @@
             var y = (x=7);
             <br>
             y</td>
-        <td></td>
+        <td>7</td>
+        <td>Logical, just follow the parentheses</td>
       </tr>
     </table>
   </div>
 
 </body>
 </html>
-
-
-
-<!--
-
-Snippet #1
-
-Evaluate this expression: 100+4
-
-Snippet #2
-
-Evaluate this expression: 'a'+'b'
-
-Snippet #3
-
-Evaluate this expression: 'Bob'+'Smith'
-
-Snippet #4
-
-Evaluate this expression: '7'+'9'
-
-Snippet #5
-
-Evaluate this expression: '7'+9
-
-Snippet #6
-
-Evaluate this expression: '7'-9
-
-Snippet #7
-
-Evaluate this expression: 'abc'*3
-
-Snippet #8
-
-Evaluate this expression: 7+2*3
-
-Snippet #9
-
-Evaluate this expression: (7+2)*3
-
-Snippet #10
-
-Evaluate this expression: (null+2)/3
-
-Snippet #11
-
-var name;
-Evaluate this expression: name
-
-Snippet #12
-
-var x = 7;
-var y = 4;
-var z = x * y;
-Evaluate this expression: z-3
-
-Snippet #13
-
-var a = true;
-var b = false;
-Evaluate this expression: a && b
-
-Snippet #14
-
-var a = true;
-var b = false;
-Evaluate this expression: a || b
-
-Snippet #15
-
-var foo = 3;
-foo++;
-foo++;
-Evaluate this expression: foo/2
-
-Snippet #16
-
-var age = 29.8;
-var wholeAge = Math.floor(age);
-var nextAge = Math.ceil(age);
-Evaluate this expression: nextAge - wholeAge
-
-Snippet #17
-
-Evaluate this expression: '5' + 3 - 3
-
-Snippet #18
-
-var isRed = false;
-isRed = !isRed;
-Evaluate this expression: isRed
-
-Snippet #19
-
-var isBlue = true;
-var isBlue = !!isBlue;
-Evaluate this expression: isBlue
-
-Snippet #20
-
-var name = 'Sally';
-var age = 25;
-Evaluate this expression: name.length + age
-
-Snippet #21
-
-var x = 10;
-var y = 73.3;
-
-var point = '[' + x + ', ' + y + ']';
-Evaluate this expression: 'point: '+point
-
-Snippet #22
-
-var numberOfSheep = 16;
-var numberOfGoats = 3;
-Evaluate this expression: numberOfGoats + numberOfSheep++
-
-Snippet #23
-
-var numberOfSheep = 16;
-var numberOfGoats = 3;
-Evaluate this expression: numberOfGoats - ++numberOfSheep
-
-Snippet #24
-
-var x;
-var y = (x=7);
-Evaluate this expression: y
-
-
-
-
-
-
-
- -->
