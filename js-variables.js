@@ -24,9 +24,9 @@ var isCool = true;
 
 var height = "5.67";
 
-var heightInt = number(height);
+var heightInt = height.parseInt;
 
-var heightNumber = height.toFixed(2);
+var heightNumber = height.parseFloat;
 
 heightNumber += 0.13;
 
@@ -43,3 +43,9 @@ if (name == Sally)
     var isSally = true;
 else
     var isSally = false;
+
+
+var name = "Mike";
+var statement = name + " is really cool";
+name = Bob;
+var statement = name + " is really cool";

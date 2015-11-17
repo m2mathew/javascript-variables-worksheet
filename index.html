@@ -1,225 +1,225 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>JavaScript variables worksheet</title>
-    <link rel="stylesheet" type="text/css" href="styles/main.css">
+		<title>JavaScript variables worksheet</title>
+		<link rel="stylesheet" type="text/css" href="styles/main.css">
 </head>
 <body>
 
-  <div>
-    <table>
-      <thead>JavaScript Variables Worksheet</thead>
-      <tr>
-        <th>Snippet</th>
-        <th>Expression</th>
-        <th>Answer</th>
-        <th>Explanation</th>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>100+4</td>
-        <td>104</td>
-        <td>basic addition</td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>'a'+'b'</td>
-        <td>'ab'</td>
-        <td>Concatenation of strings</td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td>'Bob'+'Smith'</td>
-        <td>'BobSmith'</td>
-        <td>Concatenation of strings</td>
-      </tr>
-      <tr>
-        <td>4</td>
-        <td>'7'+'9'</td>
-        <td>'79'</td>
-        <td>Concatenation of strings</td>
-      </tr>
-      <tr>
-        <td>5</td>
-        <td>'7'+9</td>
-        <td>'79'</td>
-        <td>Concatenation of strings, as JS treats the number like a string here</td>
-      </tr>
-      <tr>
-        <td>6</td>
-        <td>'7'-9</td>
-        <td>-2</td>
-        <td>Because the minus symbol is special to arithmetic functions, this treated as a numerical value</td>
-      </tr>
-      <tr>
-        <td>7</td>
-        <td>'abc'*3</td>
-        <td>NaN</td>
-        <td>The multiplication operator wants to treat all parts of the expression as a number which is not possible - Not a Number </td>
-      </tr>
-      <tr>
-        <td>8</td>
-        <td>7+2*3</td>
-        <td>13</td>
-        <td>Order of operations</td>
-      </tr>
-      <tr>
-        <td>9</td>
-        <td>(7+2)*3</td>
-        <td>27</td>
-        <td>Order of operations</td>
-      </tr>
-      <tr>
-        <td>10</td>
-        <td>(null+2)/3</td>
-        <td>0.6666666666666666</td>
-        <td>Order of operations<br>"null" has no value, so evaluation continues after that expression</td>
-      </tr>
-      <tr>
-        <td>11</td>
-        <td>var name;
-            <br>
-            name</td>
-        <td>undefined</td>
-        <td>The variable "name" holds no value</td>
-      </tr>
-      <tr>
-        <td>12</td>
-        <td>var x = 7;
-            <br>
-            var y = 4;
-            <br>
-            var z = x * y;
-            <br>
-            z-3
-            </td>
-        <td>25</td>
-        <td>Logical math through use of variables</td>
-      </tr>
-      <tr>
-        <td>13</td>
-        <td>var a = true;
-            <br>
-            var b = false;
-            <br>
-            a && b</td>
-        <td>false</td>
-        <td>Both condition must be met to be True</td>
-      </tr>
-      <tr>
-        <td>14</td>
-        <td>var a = true;
-            <br>
-            var b = false;
-            <br>
-            a || b</td>
-        <td>true</td>
-        <td>If either condition is True, then the statement evaluates to True</td>
-      </tr>
-      <tr>
-        <td>15</td>
-        <td>var foo = 3;
-            <br>
-            foo++;
-            <br>
-            foo++;
-            <br>
-            foo/2</td>
-        <td>2.5</td>
-        <td>Variable "foo" is incremented two times and then divided</td>
-      </tr>
-      <tr>
-        <td>16</td>
-        <td>var age = 29.8;
-            <br>
-            var wholeAge = Math.floor(age);
-            <br>
-            var nextAge = Math.ceil(age);
-            <br>
-            nextAge - wholeAge</td>
-        <td>1</td>
-        <td>Variable age is rounded up then down to evaluate</td>
-      </tr>
-      <tr>
-        <td>17</td>
-        <td>'5' + 3 - 3</td>
-        <td>50</td>
-        <td>First part of expression is concatenated, then subtraction treats the expression as a number</td>
-      </tr>
-      <tr>
-        <td>18</td>
-        <td>var isRed = false;
-            <br>
-            isRed = !isRed;
-            <br>
-            isRed</td>
-        <td>true</td>
-        <td>The use of the "!" (bang) character switches the value to the opposite</td>
-      </tr>
-      <tr>
-        <td>19</td>
-        <td>var isBlue = true;
-            <br>
-            var isBlue = !!isBlue;
-            <br>
-            isBlue</td>
-        <td>true</td>
-        <td>Double bang makes the variable isBlue false and then true. Not extremely useful.</td>
-      </tr>
-      <tr>
-        <td>20</td>
-        <td>var name = 'Sally';
-            <br>
-            var age = 25;
-            <br>
-            name.length + age</td>
-        <td>30</td>
-        <td>Length of string added to a number</td>
-      </tr>
-      <tr>
-        <td>21</td>
-        <td>var x = 10;
-            <br>
-            var y = 73.3;
-            <br>
-            var point = '[' + x + ', ' + y + ']';
-            <br>
-            'point: '+point</td>
-        <td>'point: [10, 73.3]'</td>
-        <td>Variables inserted into a string variable (that mimics an array)</td>
-      </tr>
-      <tr>
-        <td>22</td>
-        <td>var numberOfSheep = 16;
-            <br>
-            var numberOfGoats = 3;
-            <br>
-            numberOfGoats + numberOfSheep++</td>
-        <td>19</td>
-        <td>The evaluation of the values inside the variables occurs before the "++" increment expression can be stored and used</td>
-      </tr>
-      <tr>
-        <td>23</td>
-        <td>var numberOfSheep = 16;
-            <br>
-            var numberOfGoats = 3;
-            <br>
-            numberOfGoats - ++numberOfSheep</td>
-        <td>-14</td>
-        <td>The increment expression is before variable so it is evaluated before the numberOfSheep variable is already used</td>
-      </tr>
-      <tr>
-        <td>24</td>
-        <td>var x;
-            <br>
-            var y = (x=7);
-            <br>
-            y</td>
-        <td>7</td>
-        <td>Logical, just follow the parentheses</td>
-      </tr>
-    </table>
-  </div>
+	<div>
+		<table>
+			<thead>JavaScript Variables Worksheet</thead>
+			<tr>
+				<th>Snippet</th>
+				<th>Expression</th>
+				<th>Answer</th>
+				<th>Explanation</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>100+4</td>
+				<td>104</td>
+				<td>basic addition</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>'a'+'b'</td>
+				<td>'ab'</td>
+				<td>Concatenation of strings</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>'Bob'+'Smith'</td>
+				<td>'BobSmith'</td>
+				<td>Concatenation of strings</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>'7'+'9'</td>
+				<td>'79'</td>
+				<td>Concatenation of strings</td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td>'7'+9</td>
+				<td>'79'</td>
+				<td>Concatenation of strings, as JS treats the number like a string here</td>
+			</tr>
+			<tr>
+				<td>6</td>
+				<td>'7'-9</td>
+				<td>-2</td>
+				<td>Because the minus symbol is special to arithmetic functions, this treated as a numerical value</td>
+			</tr>
+			<tr>
+				<td>7</td>
+				<td>'abc'*3</td>
+				<td>NaN</td>
+				<td>The multiplication operator wants to treat all parts of the expression as a number which is not possible - Not a Number </td>
+			</tr>
+			<tr>
+				<td>8</td>
+				<td>7+2*3</td>
+				<td>13</td>
+				<td>Order of operations</td>
+			</tr>
+			<tr>
+				<td>9</td>
+				<td>(7+2)*3</td>
+				<td>27</td>
+				<td>Order of operations</td>
+			</tr>
+			<tr>
+				<td>10</td>
+				<td>(null+2)/3</td>
+				<td>0.6666666666666666</td>
+				<td>Order of operations<br>"null" has no value, so evaluation continues after that expression</td>
+			</tr>
+			<tr>
+				<td>11</td>
+				<td>var name;
+						<br>
+						name</td>
+				<td>undefined</td>
+				<td>The variable "name" holds no value</td>
+			</tr>
+			<tr>
+				<td>12</td>
+				<td>var x = 7;
+						<br>
+						var y = 4;
+						<br>
+						var z = x * y;
+						<br>
+						z-3
+						</td>
+				<td>25</td>
+				<td>Logical math through use of variables</td>
+			</tr>
+			<tr>
+				<td>13</td>
+				<td>var a = true;
+						<br>
+						var b = false;
+						<br>
+						a && b</td>
+				<td>false</td>
+				<td>Both condition must be met to be True</td>
+			</tr>
+			<tr>
+				<td>14</td>
+				<td>var a = true;
+						<br>
+						var b = false;
+						<br>
+						a || b</td>
+				<td>true</td>
+				<td>If either condition is True, then the statement evaluates to True</td>
+			</tr>
+			<tr>
+				<td>15</td>
+				<td>var foo = 3;
+						<br>
+						foo++;
+						<br>
+						foo++;
+						<br>
+						foo/2</td>
+				<td>2.5</td>
+				<td>Variable "foo" is incremented two times and then divided</td>
+			</tr>
+			<tr>
+				<td>16</td>
+				<td>var age = 29.8;
+						<br>
+						var wholeAge = Math.floor(age);
+						<br>
+						var nextAge = Math.ceil(age);
+						<br>
+						nextAge - wholeAge</td>
+				<td>1</td>
+				<td>Variable age is rounded up then down to evaluate</td>
+			</tr>
+			<tr>
+				<td>17</td>
+				<td>'5' + 3 - 3</td>
+				<td>50</td>
+				<td>First part of expression is concatenated, then subtraction treats the expression as a number</td>
+			</tr>
+			<tr>
+				<td>18</td>
+				<td>var isRed = false;
+						<br>
+						isRed = !isRed;
+						<br>
+						isRed</td>
+				<td>true</td>
+				<td>The use of the "!" (bang) character switches the value to the opposite</td>
+			</tr>
+			<tr>
+				<td>19</td>
+				<td>var isBlue = true;
+						<br>
+						var isBlue = !!isBlue;
+						<br>
+						isBlue</td>
+				<td>true</td>
+				<td>Double bang makes the variable isBlue false and then true. Not extremely useful.</td>
+			</tr>
+			<tr>
+				<td>20</td>
+				<td>var name = 'Sally';
+						<br>
+						var age = 25;
+						<br>
+						name.length + age</td>
+				<td>30</td>
+				<td>Length of string added to a number</td>
+			</tr>
+			<tr>
+				<td>21</td>
+				<td>var x = 10;
+						<br>
+						var y = 73.3;
+						<br>
+						var point = '[' + x + ', ' + y + ']';
+						<br>
+						'point: '+point</td>
+				<td>'point: [10, 73.3]'</td>
+				<td>Variables inserted into a string variable (that mimics an array)</td>
+			</tr>
+			<tr>
+				<td>22</td>
+				<td>var numberOfSheep = 16;
+						<br>
+						var numberOfGoats = 3;
+						<br>
+						numberOfGoats + numberOfSheep++</td>
+				<td>19</td>
+				<td>The evaluation of the values inside the variables occurs before the "++" increment expression can be stored and used</td>
+			</tr>
+			<tr>
+				<td>23</td>
+				<td>var numberOfSheep = 16;
+						<br>
+						var numberOfGoats = 3;
+						<br>
+						numberOfGoats - ++numberOfSheep</td>
+				<td>-14</td>
+				<td>The increment expression is before variable so it is evaluated before the numberOfSheep variable is already used</td>
+			</tr>
+			<tr>
+				<td>24</td>
+				<td>var x;
+						<br>
+						var y = (x=7);
+						<br>
+						y</td>
+				<td>7</td>
+				<td>Logical, just follow the parentheses</td>
+			</tr>
+		</table>
+	</div>
 
 </body>
 </html>
